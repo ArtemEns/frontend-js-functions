@@ -13,3 +13,6 @@ else
 
 
 console.log(min([2])); 
+
+
+
