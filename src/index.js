@@ -53,7 +53,7 @@ console.log(max([45,67,78,0,'tv',true]));
 
 
 var arr=[7,8,9,5,'cca',1];
-function summa(arr)
+function sum(arr)
 {
   arr = arr.filter(function(value){return typeof value==='number';})
   
@@ -68,7 +68,7 @@ return arr.reduce(function(sum,current){
   
 
 }
-console.log(summa([1,1,2,0,'tv',true])); 
+console.log(sum([10, 45, 55, 100, 66, 4, 99])); 
 
 
 
