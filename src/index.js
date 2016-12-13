@@ -7,7 +7,7 @@ arr = arr.filter(function(value){return typeof value==='number';})
 
 var i=0;
   
-   if (arr.length==i) return ('its clear bro')
+   if (arr.length==i) return ('undefined')
 
 else
 
@@ -31,7 +31,7 @@ arr = arr.filter(function(value){return typeof value==='number';})
 
 var i=0;
   
-   if (arr.length==i) return ('its clear bro')
+   if (arr.length==i) return ('undefined')
 
 else
 
@@ -59,7 +59,7 @@ function sum(arr)
   
   var i=0;
   
-   if (arr.length==i) return ('its clear bro')
+   if (arr.length==i) return ('undefined')
 
 else
 
