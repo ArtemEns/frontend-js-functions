@@ -52,28 +52,25 @@ console.log(max([45,67,78,0,'tv',true]));
 
 
 
+
 var arr=[7,8,9,5,'cca',1];
+
 function sum(arr)
 {
-  arr = arr.filter(function(value){return typeof value==='number';})
+  var slice=Array.prototype.slice.call(arguments, 0);
+  arr = slice.filter(function(value){return typeof value==='number';})
   
   var i=0;
-  
-   if (arr.length==i) return ('undefined')
+ 
+   if (arr.length==i) return (undefined)
 
 else
-
-return arr.reduce(function(sum,current){
-  return sum+current;},0);
+return slice.reduce(function(sum,current){
+return sum+current;},0);
   
-
 }
-console.log(sum([10, 45, 55, 100, 66, 4, 99])); 
 
-
-
-
-
+console.log(sum(5465,798,7654,54,true,0,-20)); 
 
 
 
