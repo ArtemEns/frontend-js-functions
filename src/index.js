@@ -1,84 +1,51 @@
+///////////MIN/////////////
 
-var arr=[7,8,9,5,'cca',1];
+var arr = [7, 8, 9, 5, 'cca', 1];
 
-function min(arr)
+function min(arr) 
 {
-arr = arr.filter(function(value){return typeof value==='number';})
-
-var i=0;
-  
-   if (arr.length==i) return ('undefined')
-
-else
-
-return Math.min.apply(null, arr);
+  var slice = Array.prototype.slice.call(arguments, 0);
+  arr = slice.filter(function (value) { return typeof value === 'number'; })
+  var i = 0;
+  if (arr.length == i) return (undefined)
+  else
+    return Math.min.apply(null, arr);
 }
-
-console.log(min([45,67,78,0,'tv',true])); 
-
+console.log(min(null, false, "4", undefined, true, 99, 6));
 
 
+//-------------------------------------------------------------------------------
 ///////MAX/////////(same)
 
-
-
-
-var arr=[7,8,9,5,'cca',1];
+var arr = [7, 8, 9, 5, 'cca', 1];
 
 function max(arr)
-{
-arr = arr.filter(function(value){return typeof value==='number';})
-
-var i=0;
-  
-   if (arr.length==i) return ('undefined')
-
-else
-
-return Math.max.apply(null, arr);
+ {
+  var slice = Array.prototype.slice.call(arguments, 0);
+  arr = slice.filter(function (value) { return typeof value === 'number'; })
+  var i = 0;
+  if (arr.length == i) return (undefined)
+  else
+    return Math.max.apply(null, arr);
 }
-
-console.log(max([45,67,78,0,'tv',true])); 
-
+console.log(max(null, false, "4", undefined, true, 99, 6));
 
 
-
-
+//-------------------------------------------------------------------------------
 ////////SUM////////////////
 
-
-
-
-
-
-
-
-var arr=[7,8,9,5,'cca',1];
-
-function sum(arr)
+var arr = [7, 8, 9, 5, 'cca', 1];
+function sum() 
 {
-  var slice=Array.prototype.slice.call(arguments, 0);
-  arr = slice.filter(function(value){return typeof value==='number';})
-  
-  var i=0;
- 
-   if (arr.length==i) return (undefined)
-
-else
-return slice.reduce(function(sum,current){
-return sum+current;},0);
-  
+      if (arguments.length === 0) { return undefined; }
+      var len = arguments.length;
+      var result = arguments[0];
+      for (var i = 1; i < len; i++)
+     {
+      var num = typeof (arguments[i]);
+      if (num != "number") { arguments[i] = 0; }
+      result += arguments[i];
+     }
+  return result;
 }
-
-console.log(sum(5465,798,7654,54,true,0,-20)); 
-
-
-
-
-
-
-
-
-
-
-
+console.log(sum(null, false, "4", undefined, true, 99, 6)); 
