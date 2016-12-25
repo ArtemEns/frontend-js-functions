@@ -4,14 +4,13 @@ var arr = [7, 8, 9, 5, 'cca', 1];
 
 function min(arr) 
 {
-  var slice = Array.prototype.slice.call(arguments, 0);
-  arr = slice.filter(function (value) { return typeof value === 'number'; })
+  arr = arr.filter(function (value) { return typeof value === 'number'; })
   var i = 0;
   if (arr.length == i) return (undefined)
   else
     return Math.min.apply(null, arr);
 }
-console.log(min(null, false, "4", undefined, true, 99, 6));
+console.log(min([null, false, "4", undefined, true, 99, 6]));
 
 
 //-------------------------------------------------------------------------------
@@ -21,14 +20,13 @@ var arr = [7, 8, 9, 5, 'cca', 1];
 
 function max(arr)
  {
-  var slice = Array.prototype.slice.call(arguments, 0);
-  arr = slice.filter(function (value) { return typeof value === 'number'; })
+  arr = arr.filter(function (value) { return typeof value === 'number'; })
   var i = 0;
   if (arr.length == i) return (undefined)
   else
     return Math.max.apply(null, arr);
 }
-console.log(max(null, false, "4", undefined, true, 99, 6));
+console.log(max([null, false, "4", undefined, true, 99, 6]));
 
 
 //-------------------------------------------------------------------------------
